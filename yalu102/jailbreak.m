@@ -809,6 +809,7 @@ RemapPage_(x+PSZ);\
     chmod("/private/var/mobile", 0777);
     chmod("/private/var/mobile/Library", 0777);
     chmod("/private/var/mobile/Library/Preferences", 0777);
+    system("nvram com.apple.System.boot-nonce=0x0ca4421157d61d42");
     
     system("(echo 'really jailbroken'; /bin/launchctl load /Library/LaunchDaemons/0.reload.plist)&");
     WriteAnywhere64(bsd_task+0x100, orig_cred);
